@@ -97,7 +97,7 @@ const serverStatusCommand = async (m, Matrix) => {
       clearInterval(loadingInterval);
 
       // Create the status message
-      const statusMessage = `??? ?? ?????? \n\n📅 Uptime: ${uptime}\n🖥 Platform: ${platform}\n\n> © Powered by ??? ?? ?`;
+      const statusMessage = `_RCD-MD CHECK_\n\n📅 Uptime: ${uptime}\n🖥 Platform: ${platform}\n\n> © Powered by RCD MD`;
 
       await typeWriterEffect(m, Matrix, key, statusMessage);
     } catch (error) {

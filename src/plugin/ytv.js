@@ -29,11 +29,11 @@ const song = async (m, Matrix) => {
 
   if (validCommands.includes(cmd)) {
     if (!text || !ytdl.validateURL(text)) {
-      return m.reply('𝐏𝐥𝐞𝐚𝐬𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐚 𝐯𝐚𝐥𝐢𝐝 𝐘𝐨𝐮𝐓𝐮𝐛𝐞 𝐔𝐑𝐋');
+      return m.reply('Please provide a valid YouTube URL.');
     }
 
     try {
-      await m.React("🔗");
+      await m.React("🔎");
 
 
       const info = await ytdl.getInfo(text);
@@ -78,7 +78,7 @@ const song = async (m, Matrix) => {
                 text: `𝚁𝙲𝙳 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁\n*🔍Title:* ${videoDetails.title}\n*✍️ Author:* ${videoDetails.author}\n*🥸Views:* ${videoDetails.views}\n*👍 Likes:* ${videoDetails.likes}\n*📆 Upload Date:* ${videoDetails.uploadDate}\n*🏮 Duration:* ${videoDetails.duration}\n`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "𝙿𝚘𝚠𝚎𝚛 𝙱𝚢 𝚁𝚌𝚍 𝙼𝚍 ⛧"
+                text: "🇱🇰 P͢O͢W͢E͢R͢ B͢Y͢ R͢C͢D͢ M͢D͢"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/2d9a21c403a79096b88c1.jpg` } }, { upload: Matrix.waUploadToServer })),
@@ -92,11 +92,11 @@ const song = async (m, Matrix) => {
                   {
                     name: "single_select",
                     buttonParamsJson: JSON.stringify({
-                      title: "🎥 ꜱᴇʟᴇᴄᴛ ᴠɪᴅᴇᴏ Qᴜᴀʟɪᴛʏ 🎥",
+                      title: "🎬 Select a video quality",
                       sections: [
                         {
-                          title: "♂🎥 Available Qualities",
-                          highlight_label: "🎥 Choose Quality",
+                          title: "♂️ Available Qualities",
+                          highlight_label: "💡 Choose Quality",
                           rows: qualityButtons
                         },
                       ]
@@ -141,7 +141,7 @@ const song = async (m, Matrix) => {
         await Matrix.sendMessage(m.from, {
           video: finalVideoBuffer,
           mimetype: 'video/mp4',
-          caption: ` *Title:* ${selectedFormat.title}\n\n𝗔𝘂𝘁𝗵𝗼𝗿: ${selectedFormat.author}\n\n𝗩𝗶𝗲𝘄𝘀: ${selectedFormat.views}\n\n𝗟𝗶𝗸𝗲𝘀: ${selectedFormat.likes}\n\n𝗨𝗽𝗹𝗼𝗮𝗱 𝗗𝗮𝘁𝗲: ${selectedFormat.uploadDate}\n\n𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻: ${duration}\n\n𝗦𝗶𝘇𝗲: ${size}\n\n⛧ Powered by 𝗥𝗖𝗗 𝗠𝗗`
+          caption: `Title: ${selectedFormat.title}\nAuthor: ${selectedFormat.author}\nViews: ${selectedFormat.views}\nLikes: ${selectedFormat.likes}\nUpload Date: ${selectedFormat.uploadDate}\nDuration: ${duration}\nSize: ${size}\n\n> 🇱🇰 P͢O͢W͢E͢R͢ B͢Y͢ R͢C͢D͢ M͢D͢`
         }, { quoted: m });
       } catch (error) {
         console.error("Error fetching video details:", error);
