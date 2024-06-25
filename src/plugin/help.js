@@ -119,7 +119,7 @@ const test = async (m, Matrix) => {
                        "header":"",
                        "title":"🇱🇰 RCD TEAM DETAILS",
                        "description":"────⋆⋅☆⋅⋆──",
-                       "id":"View All Menu"
+                       "id":"Rcd team information"
                       },
                       {
                        "header":"",
@@ -606,7 +606,7 @@ await Matrix.sendMessage(m.from, {
 });
 }
    
-   if (selectedId == "Converter Menu") {
+   if (selectedId == "Rcd team information") {
      const str =`╭───❮ *RCD TEAM INFORMATION* ❯
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
