@@ -88,7 +88,7 @@ const test = async (m, Matrix) => {
               text: `╭─────────────━┈⊷
 │🤖 ʙᴏᴛ ɴᴀᴍᴇ: *ʀᴄᴅ-ᴍᴅ*
 │📍 ᴠᴇʀꜱɪᴏɴ: 2.0.3
-│👨‍💻 ᴏᴡɴᴇʀ : *ᴇᴛʜɪx xsɪᴅ*      
+│👨‍💻 ᴏᴡɴᴇʀ : *ʀᴄᴅ ᴛᴇᴀᴍ*      
 │👤 ɴᴜᴍʙᴇʀ: 94789958225
 │📡 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
 │🛡 ᴍᴏᴅᴇ: *${mode}*
@@ -206,7 +206,7 @@ const test = async (m, Matrix) => {
 ╭─────────────━┈⊷
 │🤖 ʙᴏᴛ ɴᴀᴍᴇ: *ʀᴄᴅ-ᴍᴅ*
 │📍 ᴠᴇʀꜱɪᴏɴ: 2.0.3
-│👨‍💻 ᴏᴡɴᴇʀ : *ᴇᴛʜɪx xsɪᴅ*      
+│👨‍💻 ᴏᴡɴᴇʀ : *ʀᴄᴅ ᴛᴇᴀᴍ*      
 │👤 ɴᴜᴍʙᴇʀ: 94789958225
 │💻 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
 │🛡 ᴍᴏᴅᴇ: *${mode}*
@@ -611,11 +611,11 @@ await Matrix.sendMessage(m.from, {
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 ❯━╮
-┃✰ *RCD TEAM GROUP*=_https://chat.whatsapp.com/Cry8eSzZqW27t9H8uOcRIR_
-┃✰ *RCD TEAM CHANNEL*=_https://whatsapp.com/channel/0029Vag1WQFJf05dF0pQeU3u_
-┃✰ *RCD TEAM UPDATE BY DEXTER*
-╰━━━━━━━━━━━━━━━⪼
+╭━❮ ʀᴄᴅ ᴛᴇᴀᴍ  ❯━╮
+✰ *RCD TEAM GROUP*=_https://chat.whatsapp.com/Cry8eSzZqW27t9H8uOcRIR_
+✰ *RCD TEAM CHANNEL*=_https://whatsapp.com/channel/0029Vag1WQFJf05dF0pQeU3u_
+✰ *RCD TEAM UPDATE BY DEXTER*
+╰━━━━━━━━━━━━━━━⪼)
      `
      await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/ʀᴄᴅ.jpg'), 
