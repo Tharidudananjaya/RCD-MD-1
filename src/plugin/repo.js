@@ -10,7 +10,7 @@ const handleRepoCommand = async (m, Matrix) => {
 
     const { full_name, name, forks_count, stargazers_count, created_at, updated_at, owner } = repoData;
 
-    const messageText = `📊 R͢e͢p͢o͢s͢i͢t͢o͢r͢y͢ I͢n͢f͢o͢r͢m͢a͢t͢i͢o͢n͢:
+    const messageText = `📊 Repository Information:
     \n🔸 *Name:* ${name}
     \n⭐ *Stars:* ${stargazers_count}
     \n🍴 *Forks:* ${forks_count}
@@ -33,7 +33,7 @@ const handleRepoCommand = async (m, Matrix) => {
               text: "🇱🇰 P͢O͢W͢E͢R͢ B͢Y͢ R͢C͢D͢ M͢D͢"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
-             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/2d9a21c403a79096b88c1.jpg` } }, { upload: Matrix.waUploadToServer })),
+             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/fbbe1744668b44637c21a.jpg` } }, { upload: Matrix.waUploadToServer })),
               title: "",
               gifPlayback: true,
               subtitle: "",
@@ -51,15 +51,15 @@ const handleRepoCommand = async (m, Matrix) => {
                 {
                   name: "cta_url",
                   buttonParamsJson: JSON.stringify({
-                    display_text: "Click Here To Fork",
-                    url: `https://github.com/DEXTER-BOTS/RCD-MD/fork`
+                    display_text: "Click Here To Repo",
+                    url: `https://github.com/DEXTER-BOTS/RCD-MD`
                   })
                 },
                 {
                   name: "cta_url",
                   buttonParamsJson: JSON.stringify({
-                    display_text: "Join Wa channel",
-                    url: `https://whatsapp.com/channel/0029Vag1WQFJf05dF0pQeU3u`
+                    display_text: "Youtube",
+                    url: `https://youtube.com/@dextertoola999?si=RJdWEqzE8Q7sh5zY`
                   })
                 }
               ],
