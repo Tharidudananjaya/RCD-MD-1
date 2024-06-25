@@ -73,7 +73,7 @@ const test = async (m, Matrix) => {
   const prefix = /^[\\/!#.]/gi.test(m.body) ? m.body.match(/^[\\/!#.]/gi)[0] : '.';
         const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
         const mode = process.env.MODE;
-        const validCommands = ['list', 'help', 'menu'];
+        const validCommands = ['panel', 'help', 'menu'];
 
   if (validCommands.includes(cmd)) {
     let msg = generateWAMessageFromContent(m.from, {
@@ -115,6 +115,12 @@ const test = async (m, Matrix) => {
                     "title":"𝚁𝙲𝙳 𝙼𝙳 𝙰𝙻𝙻 𝙼𝙴𝙽𝚄",
                     "highlight_label":"🇱🇰 RCD MD",
                     "rows":[
+                      {
+                       "header":"",
+                       "title":"🇱🇰 RCD TEAM DETAILS",
+                       "description":"────⋆⋅☆⋅⋆──",
+                       "id":"View All Menu"
+                      },
                       {
                        "header":"",
                        "title":"🔰 ᴀʟʟ ᴍᴇɴᴜ",
@@ -599,6 +605,31 @@ await Matrix.sendMessage(m.from, {
   quoted: m
 });
 }
+   
+   if (selectedId == "Converter Menu") {
+     const str =`╭───❮ *RCD TEAM INFORMATION* ❯
+│➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
+│➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
+╰━━━━━━━━━━━━━━━➥
+╭━❮ 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 ❯━╮
+┃✰ *RCD TEAM GROUP*=_https://chat.whatsapp.com/Cry8eSzZqW27t9H8uOcRIR_
+┃✰ *RCD TEAM CHANNEL*=_https://whatsapp.com/channel/0029Vag1WQFJf05dF0pQeU3u_
+┃✰ *RCD TEAM UPDATE BY DEXTER*
+╰━━━━━━━━━━━━━━━⪼
+     `
+     await Matrix.sendMessage(m.from, {
+  image: fs.readFileSync('./src/ʀᴄᴅ.jpg'), 
+  caption: str, 
+  contextInfo: {
+    mentionedJid: [m.sender], 
+    forwardingScore: 9999,
+    isForwarded: true,
+  }
+}, {
+  quoted: m
+});
+}
 };
+
 
 export default test;
