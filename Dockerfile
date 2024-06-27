@@ -7,6 +7,8 @@ RUN apt-get update && \
   webp && \
   apt-get upgrade -y && \
   rm -rf /var/lib/apt/lists/*
+  npm init -y
+  npm install @whiskeysockets/baileys pino fs path awesome-phonenumber file-type
 
 COPY package.json .
 
