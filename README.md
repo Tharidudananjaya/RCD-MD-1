@@ -28,7 +28,7 @@
 
 ##  PAIRING CODE SCAN
 
-<a href="https://replit.com/@dextermd076/43"><img src="https://img.shields.io/badge/LOGIN%20WITH-PAIR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
+<a href=""><img src="https://img.shields.io/badge/LOGIN%20WITH-PAIR%20CODE-red" alt="LOGIN WITH PAIR CODE" width="250"></a>
 
 ## DEPLOY IN HEROKU
 
